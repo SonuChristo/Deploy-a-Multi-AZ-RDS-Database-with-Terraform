@@ -14,5 +14,5 @@ engine = "mysql"
 engine_version = "8.0"
 username = "admin"
 password = "password"
-
+sns_endpoint = "sonuchristo455@gmail.com"
 
