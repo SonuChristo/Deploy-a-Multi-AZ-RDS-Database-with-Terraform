@@ -1,0 +1,18 @@
+vpc_cidr = "10.0.0.0/16"
+subnet1_cidr = "10.0.1.0/24"
+public_subnet_az = "sa-east-1a"
+subnet2_cidr="10.0.2.0/24"
+private_subnet_az = "sa-east-1b"
+kms_alias_name = "alias/kms-key"
+iam_RDS-monitoring_policy = "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole"
+alarm_name_CPU  = "RDS-CPU-alarm"
+alarm_name_storage = "RDS-low-storage"
+metric_name_cpu = "CPUUtilization"
+metric_name_storage = "FreeStorageSpace"
+instance_class = "db.t3.micro"
+engine = "mysql"
+engine_version = "8.0"
+username = "admin"
+password = "password"
+
+

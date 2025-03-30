@@ -4,10 +4,10 @@ resource "aws_cloudwatch_log_group" "cloudwatch" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "RDS-CPU-alarm" {
-    alarm_name = "RDS-CPU-alarm"
+    alarm_name = var.alarm_name_CPU
     comparison_operator = "GreaterThanThreshold"
     evaluation_periods = 2
-    metric_name = "CPUUtilization"
+    metric_name = var.metric_name_cpu
     namespace = "AWS/RDS"
     period = 60
     statistic = "Average"
@@ -22,10 +22,10 @@ resource "aws_cloudwatch_metric_alarm" "RDS-CPU-alarm" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "RDS-low-storage" {
-    alarm_name = "RDS-low-storage"
+    alarm_name = var.alarm_name_storage
     comparison_operator = "LessThanThreshold"
     evaluation_periods = 2
-    metric_name = "FreeStorageSpace"
+    metric_name = var.metric_name_storage
     namespace = "AWS/RDS"
     period = 60
     statistic = "Average"

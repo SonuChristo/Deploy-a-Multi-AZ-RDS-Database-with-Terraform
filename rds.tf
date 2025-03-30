@@ -7,13 +7,13 @@ resource "aws_db_subnet_group" "db_subnet_group" {
 }
 
 resource "aws_db_instance" "Db" {
-    instance_class = "db.t3.micro"
+    instance_class = var.instance_class
     allocated_storage = 20
-    engine = "mysql"
+    engine = var.engine
     engine_version = "8.0"
     db_name = "mydatabase"
-    username = "admin"
-    password = "password"
+    username = var.username
+    password = var.password
     parameter_group_name = "default.mysql8.0"
     skip_final_snapshot = true
     multi_az = true
